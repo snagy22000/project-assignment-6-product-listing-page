@@ -3,236 +3,139 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Nosta Pizza´s</title>
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="resources/css/pizzastyle.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-  <script type='text/javascript' src='/javascript-file.js'></script>
-  <!--[if lte IE 8]>
-  <script src="/ie7.js"></script>
-  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+<header>
+  <nav id="nav-main">
+    <ul id="nav-list">
+      <li><a href="">Home</a></li>
+      <li><a href="">Brands</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">About Us</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+  <aside>
+    <div id="container">
+      <h3>cart</h3>Items in Cart <span style="font-weight: bold; cursor: pointer" id="cart-item"><strong>0
+  </strong></span>
+      <p>Price <span style="font-weight: bold;" id="cart-price"></span> €</p>
+      <div id="main-shopping-list"></div>
+      <h3>Categories</h3>
+      <div id="main-categories-list">
+        <ul>
+          <li><a href="#"><span></span>New Items</a></li>
+          <li><a href=""><span></span>Jacket</a></li>
+          <li><a href=""><span></span>Shoes</a></li>
+          <li><a href=""><span></span>T-Shirts</a></li>
+          <li><a href=""><span></span>Hats</a></li>
+        </ul>
+      </div>
+      <h3>Colors</h3>
+      <div id="main-colors-list">
+        <ul>
+          <li><a href="#"><span style="background: #ffdfa3"></span>Beige</a></li>
+          <li><a href="#"><span style="background: #000000"></span>Black</a></li>
+          <li><a href="#"><span style="background: #bec1ca"></span>Grey</a></li>
+          <li><a href="#"><span style="background: #ae753d"></span>Brown</a></li>
+          <li><a href="#"><span style="background: #49ff61"></span>Green</a></li>
+          <li><a href="#"><span style="background: #ffe93e"></span>Yellow</a></li>
+        </ul>
+      </div>
+      <h3>Sizes</h3>
+      <div id="main-size-list">
+        <ul>
+          <li><a href="#"><span></span>XS</a></li>
+          <li><a href="#"><span></span>S</a></li>
+          <li><a href="#"><span></span>M</a></li>
+          <li><a href="#"><span></span>L</a></li>
+          <li><a href="#"><span></span>XL</a></li>
+          <li><a href="#"><span></span>XXL</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
 
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-left">
-        <li class="active"><a href="../snagy22000.github.io/index.html">Back</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <article>
+    <section id="container-item">
+      <div class="item">
+        <figure><img style="max-width: 350px; max-height: 550px" src="http://i.imgur.com/ADYYvdV.jpg" alt=""></figure>
+        <div class="item-details">
+          <h5>Slip Dress</h5>
+          <p>Slip Dress €<span class="item-price">150</span>
+          </p>
+          <button class="purchase" data-name="Slip Dress" data-price="150"> Add to cart</button>
+        </div>
+      </div>
+      <div class="item">
+        <figure><img style="max-width: 350px; max-height: 550px" src="http://i.imgur.com/FAt7t0Q.jpg" alt=""></figure>
+        <div class="item-details">
+          <h5>Sheath Dress</h5>
+          <p>Sheath Dress €<span class="item-price">150</span></p>
+          <button class="purchase" data-name="Sheath Dress" data-price="150"> Add to cart</button>
+        </div>
+      </div>
+      <div class="item">
+        <figure><img style="max-width: 350px; max-height: 550px" src="http://i.imgur.com/gPYU9AW.jpg" alt=""></figure>
+        <div class="item-details">
+          <h5>Flared Dress</h5>
+          <p>Flared Dress €<span class="item-price">100</span></p>
+          <button class="purchase" data-name="Flared Dress" data-price="100"> Add to cart</button>
+        </div>
+      </div>
+      <div class="item">
+        <figure><img style="max-width: 350px; max-height: 550px" src="http://i.imgur.com/zVzbVqS.jpg" alt=""></figure>
+        <div class="item-details">
+          <h5>Lace Dress</h5>
+          <p>Lace Dress €<span class="item-price">170</span>
+          </p>
+          <button class="purchase" data-name="Lace Dress" data-price="170"> Add to cart</button>
+        </div>
+      </div>
+      <div class="item">
+        <figure><img style="max-width: 350px; max-height: 550px" src="http://i.imgur.com/RvFFutJ.jpg" alt=""></figure>
+        <div class="item-details">
+          <h5>Party Dress</h5>
+          <p>Party Dress €<span class="item-price">110</span></p>
+          <button class="purchase" data-name="Party Dress" data-price="110"> Add to cart</button>
+        </div>
+      </div>
+      <div class="item">
+        <figure><img style="max-width: 350px; max-height: 550px" src="http://i.imgur.com/86Q4wFp.jpg" alt=""></figure>
+        <div class="item-details">
+          <h5>Fabulous Gown</h5>
+          <p>Fabulous Gown €<span class="item-price">200</span></p>
+          <button class="purchase" data-name="Fabulous Gown" data-price="200"> Add to cart</button>
+        </div>
+      </div>
 
-
-<div class="container">
-  <div class="row header">
-    <div class="col-md-4"><img class="logo img-responsive" src="resources/css/img/logo%20(Small).jpg" alt="Logo"></div>
-    <div class="col-md-4">
-      <h1>Nosta Pizza</h1>
-    </div>
-    <div class="col-md-4">
-      <label class="price-sum">Placeholder for Price</label><i class="fa fa-certificate icon-large" aria-hidden="true"></i>
-      <h6>You have an Coupon!<br> Please use the number on the coupon to get a discount<br><input class="coupon-number" type="text">
-        <input type ="submit"></h6>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <nav class="col-md-12">
-      <h2>Classic </h2>
-    </nav>
-  </div>
-  <div class="row">
-    <div class="col-md-4"><img class="img-responsive" src="resources/images/pizza1%20(Small).jpg" alt="image of pizza">
-      <h3>Super Supreme</h3>
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Price</h4>
-          <div class="row">
-            <div class="col-md-4">
-              <button value="8,50">8,50</button>
-            </div>
-            <div class="col-md-4">
-              <input class="count" type="text" value="1" readonly></div>
-            <div class="col-md-4">
-              <button class="cancel">cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4"><img class="img-responsive" src="resources/images/pizza2%20(Small).png" alt="image of pizza">
-      <h3>Special Salami</h3>
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Price</h4>
-          <div class="row">
-            <div class="col-md-4">
-              <button value="8,50">8,50</button>
-            </div>
-            <div class="col-md-4">
-              <input class="count" type="text" value="1" readonly></div>
-            <div class="col-md-4">
-              <button class="cancel">cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4"><img class="img-responsive" src="resources/images/pizza3%20(Small).png" alt="image of pizza">
-      <h3>Bacon Extra</h3>
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Price</h4>
-          <div class="row">
-            <div class="col-md-4">
-              <button value="8,50">8,50</button>
-            </div>
-            <div class="col-md-4">
-              <input class="count" type="text" value="1" readonly></div>
-            <div class="col-md-4">
-              <button class="cancel">cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4"><img class="img-responsive" src="resources/images/pizza4%20(Small).jpg" alt="image of pizza">
-      <h3>Super Chilli</h3>
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Price</h4>
-          <div class="row">
-            <div class="col-md-4">
-              <button value="8,50">8,50</button>
-            </div>
-            <div class="col-md-4">
-              <input class="count" type="text" value="1" readonly></div>
-            <div class="col-md-4">
-              <button class="cancel">cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4"><img class="img-responsive" src="resources/images/pizza5%20(Small).png" alt="image of pizza">
-      <h3>Vegan Supreme</h3>
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Price</h4>
-          <div class="row">
-            <div class="col-md-4">
-              <button value="8,50">8,50</button>
-            </div>
-            <div class="col-md-4">
-              <input class="count" type="text" value="1" readonly></div>
-            <div class="col-md-4">
-              <button class="cancel">cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4"><img class="img-responsive" src="resources/images/pizza.6%20(Small).jpg" alt="image of pizza">
-      <h3>Sweet Pepper</h3>
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Price</h4>
-          <div class="row">
-            <div class="col-md-4">
-              <button value="8,50">8,50</button>
-            </div>
-            <div class="col-md-4">
-              <input class="count" type="text" value="1" readonly></div>
-            <div class="col-md-4">
-              <button class="cancel">cancel</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr class="high-line">
-  <h2>Your Order</h2>
-  <div class="table-responsive">
-    <table class="table">
-      <thead>
-      <tr>
-        <th>Type</th>
-        <th>Price per item</th>
-        <th>Amount</th>
-        <th>Delete item</th>
-        <th>Subtotal</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>Super Supreme</td>
-        <td>8.50</td>
-        <td>
-          <input type="text" placeholder="amount" value="1">
-        </td>
-        <td>
-          <button value="x">X</button>
-        </td>
-        <td>
-          <input type="text" value="8.50" readonly>
-        </td>
-      </tr>
-      <tr>
-        <td>Super Supreme</td>
-        <td>8.50</td>
-        <td>
-          <input type="text" placeholder="amount" value="2">
-        </td>
-        <td>
-          <button value="x">X</button>
-        </td>
-        <td>
-          <input type="text" value="17.00" readonly>
-        </td>
-      </tr>
-      <tr>
-        <td>Super Supreme</td>
-        <td>8.50</td>
-        <td>
-          <input type="text" placeholder="amount" value="1">
-        </td>
-        <td>
-          <button value="x">X</button>
-        </td>
-        <td>
-          <input type="text" value="8.50" readonly>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-
-  </div>
-  <div class="row">
-    <div class="col-md-12 buttons">
-      <button class="checkout">Checkout</button>
-      <button class="keep-shopping">Keep Shopping</button>
-    </div>
-  </div>
+    </section>
+  </article>
+</main>
+<div id="cart-list" class="toggle-shopping-cart">
+  <i class="fa fa-times close-cart" aria-hidden="true"></i>
+  <button class="clearCart" id="btn-clear-cart">Clear Cart</button>
+  <input title="promo-code" type="text" id="promo" class="promoCart" placeholder="promo5%, promo10%, promo15%">
+  <table>
+    <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Total</th>
+      <th>Remove</th>
+    </tr>
+    </thead>
+    <tbody id="show-cart">
+    </tbody>
+  </table>
 </div>
+<script src="script.js" defer="defer"></script>
 </body>
-
 </html>
